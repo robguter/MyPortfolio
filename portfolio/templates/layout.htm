@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link rel='stylesheet' href="{% static 'estilos/bootstrap.min.css' %}" />
+    <link rel='stylesheet' href="{% static 'estilos/bootstrap-theme.min.css' %}" />
+    <link rel='stylesheet' href="{% static 'estilos/bootstrap.css' %}" />
+    <link rel='stylesheet' href="{% static 'estilos/style.css' %}" />
+</head>
+<body>
+    {% include 'partials/navbar.htm' %}
+
+    <div class="container p-4">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    {% include 'partials/pie.htm' %}
+</body>
+</html>

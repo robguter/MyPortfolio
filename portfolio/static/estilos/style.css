@@ -1,0 +1,53 @@
+body {
+    background-color: RGB(10, 30, 40, .75);
+    color: RGB(255,255,255, .85);
+}
+.bg-black {
+    background-color: RGB(0, 0, 0, .85);
+}
+.bg-vra {
+    background-color: RGB(50, 100, 125, .75);
+    border-color: RGB(50, 100, 125, .85);
+}
+footer, .navbar {
+    background-color: RGB(0, 50, 75, .75);
+    text-align: center;
+}
+.navbar {
+    position: sticky;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    margin-bottom: 0%;
+}
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+}
+p {
+    text-align: justify;
+}
+a {
+    color: RGB(120,180,200, .85);
+}
+a:hover {
+    color: RGB(255,255,255,.55);
+    text-decoration: none;
+}
+a:active, a:visited {
+    color: RGB(255,255,255,.05);
+    text-decoration: none;
+}
+.card-project:hover {
+    border: 1px solid #999;
+    cursor: pointer;
+}
+.wh-img {
+    max-width: 300px;
+}

@@ -1,0 +1,49 @@
+{% extends 'layout.htm' %}
+{% load static %}
+{% block content %}
+    <header class='row bg-black'>
+        <div class="col-md-4">
+            <img src="{% static 'portfolio/RG.png' %}" class='wh-img' />
+        </div>
+        <div class="col-md-8 my-auto">
+            <h2>I am <strtong>Robert Gutiérrez</strtong></h2>
+            <h5>I am a Python FullStack Developer</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                In voluptates beatae distinctio, nam unde molestiae 
+                soluta quasi et, asperiores itaque ut sed quidem quo 
+                eligendi alias expedita illo dolores omnis reprehenderit 
+                cumque porro optio nostrum a illum? Tempore architecto 
+                quas sapiente culpa excepturi consequatur totam nobis 
+                quod. Animi, officiis corrupti commodi exercitationem 
+                tempora ab esse placeat numquam delectus, praesentium 
+                incidunt magnam? Dicta quis cumque, eligendi laudantium, 
+                soluta fugit vitae aliquid quasi tenetur magnam sit 
+                eveniet dolores autem, iure in quaerat vero quam odit 
+                ab? Sed perferendis explicabo totam similique in iusto 
+                reiciendis nam, minima ex iste commodi. Exercitationem, 
+                excepturi a.
+            </p>
+            <a href="{% static 'portfolio/CV Robert.pdf' %}" target='_blank' class='btn btn-outline-info bg-vra btn-lg rounded-3'>Download CV</a>
+        </div>
+    </header>
+    <div class="row my-4 text-center">
+        <h3 class='col-md-12'>My Projects</h3>
+        <p class='col-md-12 text-center'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, unde.</p>
+
+            {% for proj in projects %}
+                <div class="col-md-4 p-4">
+                    <div class="card bg-black card-project">
+                        <img src='{{proj.image.url}}' title='{{proj.title}}' class='card-img-top img-hg'/>
+                        <div class="card-body text-center">
+                            <h2>{{proj.title}}</h2>
+                            <p class="text-center">{{proj.description}}</p>
+                            {% if proj.url %}
+                                <a href='{{proj.url}}' target='_blank' class='btn btn-outline-info rounded-3 bg-vra'>{{proj.url}}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+    </div>
+{% endblock %}
