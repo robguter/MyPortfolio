@@ -1,0 +1,1 @@
+D:\Servidor\ServiDjango\Scripts\Activate
